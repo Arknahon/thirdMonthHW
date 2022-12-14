@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        contactsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "contact_cell")
+//        contactsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "contact_cell")
     }
 
 
@@ -40,58 +40,47 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource{
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 6
-    }
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        print(chats.count)
+//        return chats.count
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section{
-        case 0:
-            return a.count
-        case 1:
-            return b.count
-        case 2:
-            return e.count
-        case 3:
-            return f.count
-        case 4:
-            return m.count
-        case 5:
-            return n.count
-        default:
-            return 0
-        }
+//        switch section{
+//        case 0:
+//            return a.count
+//        case 1:
+//            return b.count
+//        case 2:
+//            return e.count
+//        case 3:
+//            return f.count
+//        case 4:
+//            return m.count
+//        case 5:
+//            return n.count
+//        default:
+//            return 0
+//        }
+        
+        return chats.count
+
 
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "contact_cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "chat_cell", for: indexPath) as! ChatTableViewCell
 //        cell.textLabel?.text = contacts[indexPath.row]
-        cell.textLabel?.text = test[indexPath.section]
-        cell.textLabel?.textColor = .purple
+        cell.chatImageView.image = chats[indexPath.row].image
+        cell.chatNameLabel.text = chats[indexPath.row].name
+        cell.chatMessageLabel.text = chats[indexPath.row].lastMessage
         cell.backgroundColor = .cyan
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section{
-        case 0:
-            return "a"
-        case 1:
-            return "b"
-        case 2:
-            return "e"
-        case 3:
-            return "f"
-        case 4:
-            return "m"
-        case 5:
-            return "n"
-        default:
-            return ""
-        }
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        switch section{
+
 }
 
 extension ViewController: UITableViewDelegate{
@@ -100,6 +89,14 @@ extension ViewController: UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        let detailedVC = storyboard?.instantiateViewController(withIdentifier: "detail_vc") as! DetailsViewController
+        
+        detailedVC.image = chats[indexPath.row].image
+        detailedVC.chatName =  chats[indexPath.row].name
+        print(detailedVC.chatName)
+        detailedVC.chatMsg =  chats[indexPath.row].lastMessage
+        
+    
+        navigationController?.pushViewController(detailedVC, animated: true)
     }
 }

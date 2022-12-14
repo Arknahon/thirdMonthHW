@@ -16,6 +16,9 @@
 		CEC048082933DB840089DCD7 /* _rdAppsLessonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC048072933DB840089DCD7 /* _rdAppsLessonTests.swift */; };
 		CEC048122933DB840089DCD7 /* _rdAppsLessonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC048112933DB840089DCD7 /* _rdAppsLessonUITests.swift */; };
 		CEC048142933DB840089DCD7 /* _rdAppsLessonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC048132933DB840089DCD7 /* _rdAppsLessonUITestsLaunchTests.swift */; };
+		CECC6154294A01B000BECC49 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC6153294A01B000BECC49 /* DetailsViewController.swift */; };
+		CECC6156294A024F00BECC49 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC6155294A024F00BECC49 /* ChatTableViewCell.swift */; };
+		CECC6158294A025800BECC49 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC6157294A025800BECC49 /* ChatModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		CEC0480D2933DB840089DCD7 /* 3rdAppsLessonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3rdAppsLessonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC048112933DB840089DCD7 /* _rdAppsLessonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _rdAppsLessonUITests.swift; sourceTree = "<group>"; };
 		CEC048132933DB840089DCD7 /* _rdAppsLessonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _rdAppsLessonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CECC6153294A01B000BECC49 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		CECC6155294A024F00BECC49 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		CECC6157294A025800BECC49 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				CEC047F92933DB830089DCD7 /* Assets.xcassets */,
 				CEC047FB2933DB830089DCD7 /* LaunchScreen.storyboard */,
 				CEC047FE2933DB830089DCD7 /* Info.plist */,
+				CECC6153294A01B000BECC49 /* DetailsViewController.swift */,
+				CECC6155294A024F00BECC49 /* ChatTableViewCell.swift */,
+				CECC6157294A025800BECC49 /* ChatModel.swift */,
 			);
 			path = 3rdAppsLesson;
 			sourceTree = "<group>";
@@ -260,7 +269,10 @@
 			files = (
 				CEC047F52933DB820089DCD7 /* ViewController.swift in Sources */,
 				CEC047F12933DB820089DCD7 /* AppDelegate.swift in Sources */,
+				CECC6156294A024F00BECC49 /* ChatTableViewCell.swift in Sources */,
 				CEC047F32933DB820089DCD7 /* SceneDelegate.swift in Sources */,
+				CECC6154294A01B000BECC49 /* DetailsViewController.swift in Sources */,
+				CECC6158294A025800BECC49 /* ChatModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
